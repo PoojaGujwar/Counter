@@ -30,17 +30,17 @@ setTodos(myTodo[idx])
 setEditIndex(idx);
 }
   return (
-    <div className='container shadow m-5'>
+    <div className='container bg-dark text-white m-5'>
       <h1 className='text-center pt-3 pb-2'>Todo App</h1>
-      <form onSubmit={addHandler} className='form-control d-flex align-items-center'>
-      <div className='flex-fill'>
-        <input type='text' name="todo" placeholder='Enter your todo' onChange={(e)=>setTodos(e.target.value)} value={todos} className='border-0'
+      <form onSubmit={addHandler} className='form-control d-flex align-items-center bg-light'>
+        <input type='text' name="todo" placeholder='Enter your todo' onChange={(e)=>setTodos(e.target.value)} value={todos} className='border-0 flex-grow-1' 
         />
-        <button type='submit' className='btn btn-primary justify-end'>Add</button>
-      </div>
+<button type='submit' className='btn btn-primary ms-auto'>
+      Add
+    </button>
       </form>
       <div className='m-5'>
-        <ul className='list-group'>{myTodo && myTodo.map((val,index)=>(<li key={index} className='list-group-item'>{val}<button onClick={()=>deleteHandler(index)} className='btn list-btn btn-danger'>Delete</button>
+        <ul className='list-group'>{myTodo && myTodo.map((val,index)=>(<li key={index} className='list-group-item bg-light'>{val}<button onClick={()=>deleteHandler(index)} className='btn list-btn btn-danger'>Delete</button>
         <button onClick={()=>updateHandler(index)} className='btn list-btn btn-info'>Update</button>
         </li>))}</ul>
       </div>

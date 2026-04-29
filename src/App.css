@@ -4,6 +4,10 @@ height: 100vh;
 margin: 10px;
 
 }
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
 .input{
     width: 50%;
     padding: 10px;
