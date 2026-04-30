@@ -6,13 +6,16 @@ import './App.css'
 import TodoApp from './components/TodoApp'
 import "bootstrap/dist/css/bootstrap.css"
 import Counter from './components/Counter'
+import Calculator from './components/Calculator'
 
 function App() {
   const [count, setCount] = useState(0)
   return (
     <>
+     <Calculator/>
     <Counter/>
    <TodoApp/>
+  
     </>
   )
 }
